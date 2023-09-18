@@ -1,6 +1,6 @@
 import os
 
-def get_files(path):
+def get_paths(path):
 
     #list of extensions to search
     extensions = [
@@ -15,8 +15,12 @@ def get_files(path):
             if ext in extensions:
                 yield absolute_path
 
+
+def get_files(startpath):
+    x = get_paths(startpath)
+    for i in x:
+        return str(i)
+
 #check if it works correctly
 if __name__ == "__main__":
     x = get_files('/home')
-    for i in x:
-        print(i)

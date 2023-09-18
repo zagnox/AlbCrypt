@@ -34,6 +34,8 @@ def decrypt_files(file_name, key):
     dec = aes.decrypt(plaintext)
     with open(file_name, 'wb') as (fo):
         fo.write(dec)
+    os.path.splitext(file_name)[0]
+    print(file_name)
     print(ascii_artwork.ascii_artwork_dec)
 
 

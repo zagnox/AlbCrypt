@@ -31,11 +31,13 @@ def get_paths(path):
             ext = absolute_path.split('.')[-1]
             if ext in extensions:
                 yield absolute_path
-                
+
+
 def get_files(startpath):
     x = get_paths(startpath)
     for i in x:
         return str(i)
+
 
 #check if it works correctly
 if __name__ == "__main__":

@@ -8,6 +8,6 @@ Minor tests have been conducted to ensure there are no syntax errors and the scr
 
 Clone repository `git clone https://github.com/zagnox/AlbCrypt.git`
 
-Run script and specify target folder `python3 main.py -p <target path>`
+Run script and specify target folder `python3 albcrypt.py -p <target path>`
 
-Run again to decrypt files with `-d` decrypt option `python3 main.py -d -p <target path>`
+Run again to decrypt files with `-d` decrypt option `python3 albcrypt.py -d -p <target path>`

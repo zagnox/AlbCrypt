@@ -22,4 +22,4 @@ this project at anytime. You are responsible for your own actions and any
 legal consequences they may incur.
 
 Ky projekt sherben vetem per QELLIME EDUKUESE. Une si zhvillues nuk kam asnje pergjegjesi
-per keqperdorimin e ketij projekti, dhe denoj cdo lloj perdorimi pervecse per edukim. Une e kam limituar kete skript qe te enkriptoj vetem 1 file per cdo ekzekutim. Perdorimi i ketij programi ne sisteme qe nuk jane ne prnesine tuaj eshte totalisht ilegal. Nese une jam ne dijeni apo dyshoj per abuzim apo keqperdorim te ketij programi, une do ta fshij kete projekt ne momentin me te pare. Ju jeni pergjegjes per veprimet tuaja dhe pasojat ligjore te tyre.
+per keqperdorimin e ketij projekti, dhe denoj cdo lloj perdorimi pervecse per edukim. Une e kam limituar kete skript qe te enkriptoj vetem 1 file per cdo ekzekutim. Perdorimi i ketij programi ne sisteme qe nuk jane ne pronesine tuaj eshte totalisht ilegal. Nese une jam ne dijeni apo dyshoj per abuzim apo keqperdorim te ketij programi, une do ta fshij kete projekt ne momentin me te pare. Ju jeni pergjegjes per veprimet tuaja dhe pasojat ligjore te tyre.

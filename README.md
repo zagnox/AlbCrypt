@@ -2,7 +2,10 @@
 AlbCrypt is an open-source, python ransomware Proof-of-Concept. This project is young and incomplete so there may be bugs and errors.
 Minor tests have been conducted to ensure there are no syntax errors and the script runs.
 
+AlbCrypt eshte nje python ransomware me burim te hapur si konecpt prove. Ky projekt eshte fillestar dhe i paperfunduar dhe mund te kete probleme te vogla. Disa teste jane kryer per tu siguruar qe nuk ka gabime ne sintakse dhe qe kodi ekzekutohet.
+
 **WARNING! If run, this script can encrypt files. Make sure you run it in a safe environment (e.g. virtual machine).**
+**KUJDES! Nese ekzekutohet, ky kod mund te enkriptoje files. Sigurohuni qe te eksperimentoni ne nje ambient te sigurt (p.sh makineri virtuale)**
 
 ## Usage
 

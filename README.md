@@ -2,10 +2,11 @@
 AlbCrypt is an open-source, python ransomware Proof-of-Concept. This project is young and incomplete so there may be bugs and errors.
 Minor tests have been conducted to ensure there are no syntax errors and the script runs.
 
-AlbCrypt eshte nje python ransomware me burim te hapur si konecpt prove. Ky projekt eshte fillestar dhe i paperfunduar dhe mund te kete probleme te vogla. Disa teste jane kryer per tu siguruar qe nuk ka gabime ne sintakse dhe qe kodi ekzekutohet.
+AlbCrypt eshte nje python ransomware me burim te hapur si koncept prove. Ky projekt eshte fillestar dhe i paperfunduar dhe mund te kete probleme te vogla. Disa teste jane kryer per tu siguruar qe nuk ka gabime ne sintakse dhe qe kodi ekzekutohet.
 
 **WARNING! If run, this script can encrypt files. Make sure you run it in a safe environment (e.g. virtual machine).**
-**KUJDES! Nese ekzekutohet, ky kod mund te enkriptoje files. Sigurohuni qe te eksperimentoni ne nje ambient te sigurt (p.sh makineri virtuale)**
+
+**KUJDES! Nese ekzekutohet, ky kod mund te enkriptoje filet tuaja. Sigurohuni qe te eksperimentoni ne nje ambient te sigurt (p.sh makineri virtuale)**
 
 ## Usage
 
@@ -25,4 +26,4 @@ this project at anytime. You are responsible for your own actions and any
 legal consequences they may incur.
 
 Ky projekt sherben vetem per QELLIME EDUKUESE. Une si zhvillues nuk kam asnje pergjegjesi
-per keqperdorimin e ketij projekti, dhe denoj cdo lloj perdorimi pervecse per edukim. Une e kam limituar kete skript qe te enkriptoj vetem 1 file per cdo ekzekutim. Perdorimi i ketij programi ne sisteme qe nuk jane ne pronesine tuaj eshte totalisht ilegal. Nese une jam ne dijeni apo dyshoj per abuzim apo keqperdorim te ketij programi, une do ta fshij kete projekt ne momentin me te pare. Ju jeni pergjegjes per veprimet tuaja dhe pasojat ligjore te tyre.
+per keqperdorimin e ketij projekti, dhe denoj cdo lloj perdorimi pervecse per edukim. Une e kam limituar kete skript qe te enkriptoj vetem nje file per cdo ekzekutim. Perdorimi i ketij programi ne sisteme qe nuk jane ne pronesine tuaj eshte totalisht ilegal. Nese une jam ne dijeni apo dyshoj per abuzim apo keqperdorim te ketij programi, une do ta fshij kete projekt ne momentin me te pare. Ju jeni pergjegjes per veprimet tuaja dhe per pasojat ligjore qe vijne prej tyre.

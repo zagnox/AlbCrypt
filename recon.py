@@ -1,6 +1,6 @@
 import os
 
-def get_paths(path):
+def get_files(path):
 
     #list of extensions to search
     extensions = [
@@ -24,22 +24,19 @@ def get_paths(path):
         'zip', 'tar', 'tgz', 'bz2', '7z', 'rar', 'bak',  # compressed formats
     ]
 
-    #yield absolute path of each file
+    #get absolute path of each file
+    file_list = []
     for dirpath, dirs, files in os.walk(path):
         for i in files:
             absolute_path = os.path.abspath(os.path.join(dirpath, i))
             ext = absolute_path.split('.')[-1]
             if ext in extensions:
-                yield absolute_path
+                file_list.append(absolute_path)
+
+    return file_list
 
 
-def get_files(startpath):
-    x = get_paths(startpath)
-    for i in x:
-        return str(i)
-
-
-#check if it works correctly
+#check if it works
 if __name__ == "__main__":
-    x = get_files('/home')
+    get_files("/home/test")
     
